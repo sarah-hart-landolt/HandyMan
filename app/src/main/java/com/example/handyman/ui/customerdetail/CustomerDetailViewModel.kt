@@ -22,7 +22,6 @@ class CustomerDetailViewModel @ViewModelInject constructor(
     // Can't resolve type mismatch for "Resource"
     val customer: LiveData<Resource<Customer>> = _customer
 
-
     fun start(id: Int) {
         _id.value = id
     }

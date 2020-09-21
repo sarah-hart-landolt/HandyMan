@@ -9,11 +9,12 @@ import javax.annotation.Nullable
 data class Customer (
     @PrimaryKey
     val identifier: Int,
-val visitOrder: Int,
-val name:String,
-val phoneNumber:String,
+    val visitOrder: Int,
+    val name:String,
+    val phoneNumber:String,
     @Embedded
-val profilePicture:ProfilePicture,
+    val profilePicture:ProfilePicture,
     @Embedded
     val location:Location,
-val serviceReason:String)
+    val serviceReason:String
+)

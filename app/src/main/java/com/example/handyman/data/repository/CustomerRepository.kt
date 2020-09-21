@@ -10,11 +10,11 @@ class CustomerRepository @Inject constructor(
     private val localDataSource: CustomerDao
 ) {
 
-
     fun getCustomers() = performGetOperation(
         databaseQuery = { localDataSource.getAllCustomers() },
         networkCall = { remoteDataSource.getCustomers() },
         saveCallResult = { localDataSource.insertAll(it) }
     )
+
 
 }
