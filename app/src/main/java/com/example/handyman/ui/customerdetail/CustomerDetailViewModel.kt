@@ -19,6 +19,7 @@ class CustomerDetailViewModel @ViewModelInject constructor(
     private val _customer = _id.switchMap { id ->
         customerDao.getCustomer(id)
     }
+    // Can't resolve type mismatch for "Resource"
     val customer: Resource<LiveData<Customer>> = _customer
 
 

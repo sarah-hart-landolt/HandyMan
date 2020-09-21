@@ -61,9 +61,9 @@ class CustomerDetailFragment : Fragment() {
 
     private fun bindCustomer(customer: Customer) {
         binding.name.text = customer.name
-        binding.species.text = customer.phoneNumber
-        binding.status.text = customer.location.address.street
-        binding.gender.text = customer.serviceReason
+        binding.phone.text = customer.phoneNumber
+        binding.address.text = customer.location.address.street
+        binding.service.text = customer.serviceReason
         Glide.with(binding.root)
             .load(customer.profilePicture.large)
             .transform(CircleCrop())
