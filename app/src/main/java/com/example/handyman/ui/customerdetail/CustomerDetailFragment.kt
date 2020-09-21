@@ -35,11 +35,9 @@ class CustomerDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.getInt("id")?.let { viewModel.start(it) }
-/*
         setupObservers()
-*/
     }
-           /* private fun setupObservers() {
+            private fun setupObservers() {
                 viewModel.customer.observe(viewLifecycleOwner, Observer {
                     when (it.status) {
                         Resource.Status.SUCCESS -> {
@@ -57,7 +55,7 @@ class CustomerDetailFragment : Fragment() {
                         }
                     }
                 })
-            }*/
+            }
 
     private fun bindCustomer(customer: Customer) {
         binding.name.text = customer.name

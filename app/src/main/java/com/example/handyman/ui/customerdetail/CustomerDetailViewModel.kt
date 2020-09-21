@@ -20,7 +20,7 @@ class CustomerDetailViewModel @ViewModelInject constructor(
         customerDao.getCustomer(id)
     }
     // Can't resolve type mismatch for "Resource"
-    val customer: Resource<LiveData<Customer>> = _customer
+    val customer: LiveData<Resource<Customer>> = _customer
 
 
     fun start(id: Int) {
